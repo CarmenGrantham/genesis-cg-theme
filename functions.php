@@ -5,7 +5,7 @@ include_once( get_template_directory() . '/lib/init.php' );
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'Genesis CG Theme' );
 define( 'CHILD_THEME_URL', 'http://carmengrantham.com/' );
-define( 'CHILD_THEME_VERSION', '2.2.2' );
+define( 'CHILD_THEME_VERSION', '1.0' );
 
 //* Enqueue Google Fonts
 add_action( 'wp_enqueue_scripts', 'genesis_sample_google_fonts' );
