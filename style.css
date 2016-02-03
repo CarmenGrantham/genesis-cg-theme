@@ -1791,3 +1791,19 @@ li.comment {
 
 }
 
+/**
+ * Custom changes to styles - Carmen Grantham
+ */
+ .entry-content a.more-link {
+    border-bottom: none;
+}
+ 
+.entry-content a.alignleft img {
+    margin-right: 2rem;
+}
+ 
+.home .entry-content .widget-title {
+    font-size: 3.6rem;
+    text-transform: none;
+}
+ 

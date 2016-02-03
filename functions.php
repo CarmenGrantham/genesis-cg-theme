@@ -29,3 +29,27 @@ add_theme_support( 'custom-background' );
 
 //* Add support for 3-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 3 );
+
+
+// Register widget area called 'home-below-content'
+genesis_register_sidebar( array(
+'id'            => 'home-below-content',
+'name'          => __( 'Home Below Content', 'genesis' ),
+'description'   => __( 'This is the home below content section.', 'genesis' ),
+) );
+
+//* Add the Home Below Content sections
+add_action( 'genesis_entry_content', 'sk_show_posts' );
+function sk_show_posts() {
+    if ( is_front_page() ) {
+        printf( '<div %s>', genesis_attr( 'home-below-content' ) );
+        genesis_widget_area( 'home-below-content' );
+        echo '</div>';
+    }
+}
+
+//* Modify the Excerpt read more link, so rather than just plain text of ..., use a link with text [Continue Reading]
+function new_excerpt_more($more) {
+    return '&nbsp;<a class="more-link" href="' . get_permalink() . '"> [Continue Reading]</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
