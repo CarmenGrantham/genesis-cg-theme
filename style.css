@@ -1242,10 +1242,6 @@ img.alignright,
 	margin-bottom: 0;
 }
 
-.entry-content code {
-	background-color: #333;
-	color: #ddd;
-}
 
 /* ## Entry Meta
 --------------------------------------------- */
@@ -1807,3 +1803,25 @@ li.comment {
     text-transform: none;
 }
  
+/* Format code tags to use grey block */
+pre, code{
+    direction: ltr;
+    text-align: left;
+    font-family: Consolas, Monaco, "Courier New", Courier, monospace;
+    color: #666;
+    background: #F5F5F5;
+    word-wrap: break-word;
+}
+
+pre {
+    border: solid 1px #dedee3;
+    margin: 10px; 
+    padding:10px; 
+    overflow: auto;
+}
+
+code {
+    margin-bottom: 22px;
+    overflow-x: auto;
+}
+
